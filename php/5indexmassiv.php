@@ -2,6 +2,8 @@
 error_reporting(-1);
 header('Content-Type: text/html; charset=UTF-8');?>
 
+<p>http://php720.com/task/5</p>
+
 <?php
 # all elements 
 $arrayAll = array();
@@ -18,3 +20,4 @@ for ($i = 0 ; !($i > 3) ; $i++){
 echo 'Массив: <pre>';
 print_r( $arrayAll );
 echo  '</pre> Элементы массива не парный индекс:<p>' , $array2 , '</p>Произведение ' , array_product($arrayAll);
+?>
