@@ -6,14 +6,15 @@
 <body>
 <p>http://php720.com/task/7</p>
 
-<?php if(isset($_POST['gradus'])){ 
-$a = $_POST["gradus"];
-$number = 43200*$a/360;	
+<?php if(isset($_POST['gradus']) && $_POST["gradus"] >= 0  && $_POST["gradus"] <= 360){ 
+$gradus = $_POST["gradus"];
+$gradus = (int)$_POST['gradus'];
+				$number = 43200*$gradus/360;	
 				$h   = $number /3600;
 				$hours = round($h,0);
 				$min = $number % 3600 / 60; 
 				$sec = $number % 3600 % 60;
-				echo "Введено $a градусов<br>";
+				echo "Введено $gradus градусов<br>";
 				echo "Время:<br>"; 
 				echo "$hours : $min : $sec";
 } else { 
