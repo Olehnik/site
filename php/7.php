@@ -8,16 +8,23 @@
 
 <?php 
 $gradus = 0;
+$hours =0;
 	if(isset($_POST['gradus'])){
 		$gradus = (int)$_POST['gradus'];
 			if($gradus >= 0  && $gradus <= 360){ 
 				$number = 43200*$gradus/360;	// 43200 - кол-во секунд в 12 часах 
 				$h = $number /3600;
 				$hours = round($h,0);
-				echo "Введено $gradus градусов<br>";
-				echo "Часы:<br>"; 
-				echo "$hours";
-			}
+				
+				
+			} 
+			else{						
+					print '<p><font color="red">Данные неккоректны!</font><br>';
+				}
+				echo "Введено: ". $_POST['gradus']."!<br>";
+				echo "Часы: "; 
+				echo $hours;
+			
 	}
 	else { 
 ?>
