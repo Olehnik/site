@@ -4,7 +4,7 @@
 	<title>Стрелка</title>
 </head>
 <body>
-<p>http://php720.com/task/2</p>
+<p>http://php720.com/task/7</p>
 <h1>Введите градусы (0 - 360):</h1>
 			<form method="post" action="">           
             <input type="text" name="gradus">            
