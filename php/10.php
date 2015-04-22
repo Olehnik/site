@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<meta charset="1251-windows">
+	<meta charset="UTF-8">
 	<title>Карты</title>
 </head>
 <body>
