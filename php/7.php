@@ -19,7 +19,7 @@ $hours =0;
 				
 			} 
 			else{						
-					print '<p><font color="red">Данные неккоректны!</font><br></p>';
+					print '<p><font color="red">Данные неккоректны!</font></p><br>';
 				}
 				echo "Введено: ". $_POST['gradus']."!<br>";
 				echo "Часы: "; 
