@@ -18,8 +18,15 @@ $hours =0;
 				
 				
 			} 
-			else{						
-					print '<p><font color="red">Данные неккоректны!</font></p><br>';
+			else{	
+					?>
+					<h1>Введите градусы (0 - 360):</h1>
+						<form method="post" action=""> 
+						<input type="text" name="gradus"> 
+						<input type="submit" value="Отправить" name="submit"> 
+						</form>
+						<?php
+							print '<p><font color="red">Данные неккоректны!</font></p><br>';					
 				}
 				echo "Введено: ". $_POST['gradus']."!<br>";
 				echo "Часы: "; 
