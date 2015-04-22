@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <head>
-	<meta charset="UTF-8">
-	<title>Р”РѕСЃС‚РѕРёРЅСЃС‚РІР° РёРіСЂР°Р»СЊРЅС‹С… РєР°СЂС‚</title>
+	<meta charset="1251-windows">
+	<title>Карты</title>
 </head>
 <body>
 <p>http://php720.com/task/10</p>
-<h1>Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ (6 - 14):</h1>
-			<form method="post" action="">           
-            <input type="text" name="karty">            
-            <input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ" name="submit">        
-			</form>
-<?php			
-	$a = $_POST["karty"];
-		if($a >= 6 && $a <=14)
-			{				
-				switch ("$a") {
+
+<?php 
+$karty = 0;
+	if(isset($_POST['karty'])){
+		$karty = (int)$_POST['karty'];
+			if($karty >= 6 && $karty <=14){ 
+				switch ("$karty") {
 					case 6:
-						echo "С€РµСЃС‚РµСЂРєР°";
+						echo "шестерка";
 						break;
 					case 7:
-						echo "СЃРµРјРµСЂРєР°";
+						echo "семерка";
 						break;
 					case 8:
-						echo "РІРѕСЃСЊРјРµСЂРєР°";
+						echo "восьмерка";
 						break;
 					case 9:
-						echo "РґРµРІСЏС‚РєР°";
+						echo "девятка";
 						break;
 					case 10:
-						echo "РґРµСЃСЏС‚РєР°";
+						echo "десятка";
 						break;
 					case 11:
-						echo "РІР°Р»РµС‚";
+						echo "валет";
 						break;
 					case 12:
-						echo "РґР°РјР°";
+						echo "дама";
 						break;
 					case 13:
-						echo "РєРѕСЂРѕР»СЊ";
+						echo "король";
 						break;
 					case 14:
-						echo "С‚СѓР·";
+						echo "туз";
 						break;
-						}
-
-			}
-		else
-			{
-				echo "Р’С‹ РЅРµ РІРІРµР»Рё С‡РёСЃР»Рѕ РѕС‚ 6 РґРѕ 14";
-			}				
+					}
+				
+			} 
+			else{						
+					print '<h2><font color="red">Такой карты нет!</font><h2>';
+				}	
+	}
+	else { 
 ?>
+<h1>Введите число (6 - 14):</h1>
+	<form method="post" action=""> 
+		<input type="text" name="karty"> 
+		<input type="submit" value="Отправить" name="submit"> 
+	</form>
+<?php } ?>
+
 </body>
 </html>
