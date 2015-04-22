@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<meta charset="1251-winows">
+	<meta charset="UTF-8">
 	<title>Китайский календарь</title>
 </head>
 <body>
